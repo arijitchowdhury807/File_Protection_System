@@ -1,129 +1,129 @@
-import streamlit as st
-import os
+# import streamlit as st
+# import os
 
-st.set_page_config(
-    page_title="Settings",
-    page_icon="⚙",
-    layout="wide"
-)
+# st.set_page_config(
+#     page_title="Settings",
+#     page_icon="⚙",
+#     layout="wide"
+# )
 
-st.title("⚙ System Settings")
+# st.title("⚙ System Settings")
 
-st.divider()
+# st.divider()
 
-# -------------------------
-# Auto Recovery Setting
-# -------------------------
+# # -------------------------
+# # Auto Recovery Setting
+# # -------------------------
 
-st.subheader("♻ Recovery Settings")
+# st.subheader("♻ Recovery Settings")
 
-auto_restore = st.toggle(
-    "Enable Automatic File Recovery",
-    value=True
-)
+# auto_restore = st.toggle(
+#     "Enable Automatic File Recovery",
+#     value=True
+# )
 
-if auto_restore:
-    st.success(
-        "Automatic recovery enabled."
-    )
-else:
-    st.warning(
-        "Automatic recovery disabled."
-    )
+# if auto_restore:
+#     st.success(
+#         "Automatic recovery enabled."
+#     )
+# else:
+#     st.warning(
+#         "Automatic recovery disabled."
+#     )
 
-st.divider()
+# st.divider()
 
-# -------------------------
-# Monitoring Settings
-# -------------------------
+# # -------------------------
+# # Monitoring Settings
+# # -------------------------
 
-st.subheader("🛰 Monitoring Settings")
+# st.subheader("🛰 Monitoring Settings")
 
-monitoring = st.toggle(
-    "Enable Monitoring",
-    value=True
-)
+# monitoring = st.toggle(
+#     "Enable Monitoring",
+#     value=True
+# )
 
-if monitoring:
-    st.success(
-        "Monitoring enabled."
-    )
-else:
-    st.warning(
-        "Monitoring disabled."
-    )
+# if monitoring:
+#     st.success(
+#         "Monitoring enabled."
+#     )
+# else:
+#     st.warning(
+#         "Monitoring disabled."
+#     )
 
-st.divider()
+# st.divider()
 
-# -------------------------
-# Alerts
-# -------------------------
+# # -------------------------
+# # Alerts
+# # -------------------------
 
-st.subheader("🚨 Alert Management")
+# st.subheader("🚨 Alert Management")
 
-alert_file = "data/metadata/alert.txt"
+# alert_file = "data/metadata/alert.txt"
 
-if st.button("Clear Alerts"):
+# if st.button("Clear Alerts"):
 
-    if os.path.exists(alert_file):
+#     if os.path.exists(alert_file):
 
-        with open(alert_file, "w") as f:
-            f.write("")
+#         with open(alert_file, "w") as f:
+#             f.write("")
 
-        st.success(
-            "Alerts cleared successfully."
-        )
+#         st.success(
+#             "Alerts cleared successfully."
+#         )
 
-    else:
+#     else:
 
-        st.info(
-            "No alerts found."
-        )
+#         st.info(
+#             "No alerts found."
+#         )
 
-st.divider()
+# st.divider()
 
-# -------------------------
-# Logs
-# -------------------------
+# # -------------------------
+# # Logs
+# # -------------------------
 
-st.subheader("📜 Log Management")
+# st.subheader("📜 Log Management")
 
-log_file = "data/logs/security.log"
+# log_file = "data/logs/security.log"
 
-if st.button("Clear Logs"):
+# if st.button("Clear Logs"):
 
-    if os.path.exists(log_file):
+#     if os.path.exists(log_file):
 
-        open(log_file, "w").close()
+#         open(log_file, "w").close()
 
-        st.success(
-            "Logs cleared successfully."
-        )
+#         st.success(
+#             "Logs cleared successfully."
+#         )
 
-    else:
+#     else:
 
-        st.info(
-            "No log file found."
-        )
+#         st.info(
+#             "No log file found."
+#         )
 
-st.divider()
+# st.divider()
 
-# -------------------------
-# System Information
-# -------------------------
+# # -------------------------
+# # System Information
+# # -------------------------
 
-st.subheader("ℹ System Information")
+# st.subheader("ℹ System Information")
 
-st.info(
-    """
-    File Protection System
+# st.info(
+#     """
+#     File Protection System
 
-    Features:
-    • SHA-256 Integrity Verification
-    • Read-Only Protection
-    • Real-Time Monitoring
-    • Automatic Backup Recovery
-    • Security Alerts
-    • Event Logging
-    """
-)
+#     Features:
+#     • SHA-256 Integrity Verification
+#     • Read-Only Protection
+#     • Real-Time Monitoring
+#     • Automatic Backup Recovery
+#     • Security Alerts
+#     • Event Logging
+#     """
+# )
